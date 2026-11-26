@@ -1,0 +1,121 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+    min-height: 100vh;
+    padding: 20px;
+    color: #1f2937;
+}
+
+.container {
+    max-width: 720px;
+    margin: 0 auto;
+}
+
+header {
+    text-align: center;
+    color: white;
+    margin-bottom: 24px;
+}
+
+header h1 { font-size: 2rem; }
+.subtitle { opacity: 0.9; margin-top: 4px; }
+
+.card {
+    background: white;
+    border-radius: 16px;
+    padding: 24px;
+    margin-bottom: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+.card h2 { font-size: 1.2rem; margin-bottom: 16px; color: #1e3a8a; }
+
+.dados-conta {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 16px;
+}
+
+.campo { display: flex; flex-direction: column; }
+.label { font-size: 0.75rem; text-transform: uppercase; color: #6b7280; letter-spacing: 0.05em; }
+.valor { font-size: 1.1rem; font-weight: 600; margin-top: 4px; }
+
+.chat-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+}
+.chat-header h2 { margin: 0; }
+
+.btn-primary {
+    background: #1e3a8a;
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+.btn-primary:hover { background: #2563eb; }
+.btn-primary:disabled { background: #9ca3af; cursor: not-allowed; }
+
+.hidden { display: none; }
+
+.chat-area { margin-top: 12px; }
+
+.mensagens {
+    height: 320px;
+    overflow-y: auto;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    padding: 12px;
+    background: #f9fafb;
+    margin-bottom: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.msg {
+    max-width: 80%;
+    padding: 10px 14px;
+    border-radius: 12px;
+    font-size: 0.95rem;
+    line-height: 1.4;
+    white-space: pre-wrap;
+}
+.msg.cliente { align-self: flex-end; background: #1e3a8a; color: white; border-bottom-right-radius: 4px; }
+.msg.bot { align-self: flex-start; background: white; border: 1px solid #e5e7eb; border-bottom-left-radius: 4px; }
+.msg.digitando { align-self: flex-start; background: #f3f4f6; color: #6b7280; font-style: italic; }
+
+.input-area { display: flex; gap: 8px; }
+
+.input-area input {
+    flex: 1;
+    padding: 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+.input-area input:focus { outline: 2px solid #3b82f6; border-color: transparent; }
+
+.sugestoes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 12px;
+}
+.sugestao {
+    background: #eff6ff;
+    color: #1e3a8a;
+    border: 1px solid #bfdbfe;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    cursor: pointer;
+}
+.sugestao:hover { background: #dbeafe; }

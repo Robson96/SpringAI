@@ -23,6 +23,8 @@ public class Conta {
     private Cliente cliente;
     private String tipo;
 
+    public Conta() {}
+
     public Cliente getCliente() {
         return cliente;
     }

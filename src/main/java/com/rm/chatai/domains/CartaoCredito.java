@@ -23,6 +23,9 @@ public class CartaoCredito {
     private LocalDate vencimentoFatura;
     private LocalDate fechamentoFatura;
 
+    public CartaoCredito() {
+    }
+
     public String getBandeira() {
         return bandeira;
     }

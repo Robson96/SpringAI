@@ -20,6 +20,8 @@ public class Transacao {
     private String tipo;
     private String categoria;
 
+    public Transacao() {}
+
     public Transacao(Long id, Long contaId, String descricao, Double valor, LocalDate data, String tipo, String categoria) {
         this.id = id;
         this.contaId = contaId;

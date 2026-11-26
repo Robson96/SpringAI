@@ -18,6 +18,8 @@ public class Cliente {
     private String email;
     private LocalDate dataNascimento;
 
+    public Cliente() {}
+
     public Long getId() {
         return id;
     }

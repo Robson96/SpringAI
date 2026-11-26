@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BancoRM Chat</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+    <header>
+        <h1>🏦 BancoRM</h1>
+        <p class="subtitle">Atendimento inteligente com Spring AI + Ollama local</p>
+    </header>
+
+    <section class="card" id="conta-card">
+        <h2>Minha Conta</h2>
+        <div class="dados-conta">
+            <div class="campo">
+                <span class="label">Titular</span>
+                <span class="valor" id="titular">—</span>
+            </div>
+            <div class="campo">
+                <span class="label">Agência / Conta</span>
+                <span class="valor" id="agencia-conta">—</span>
+            </div>
+            <div class="campo">
+                <span class="label">Saldo disponível</span>
+                <span class="valor" id="saldo">—</span>
+            </div>
+            <div class="campo">
+                <span class="label">Fatura atual</span>
+                <span class="valor" id="fatura">—</span>
+            </div>
+            <div class="campo">
+                <span class="label">Vencimento da fatura</span>
+                <span class="valor" id="vencimento">—</span>
+            </div>
+            <div class="campo">
+                <span class="label">Limite disponível</span>
+                <span class="valor" id="limite">—</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="card">
+        <div class="chat-header">
+            <h2>Atendimento</h2>
+            <button id="btn-iniciar-chat" class="btn-primary">💬 Iniciar Chat</button>
+        </div>
+
+        <div id="chat-area" class="chat-area hidden">
+            <div id="mensagens" class="mensagens"></div>
+            <div class="input-area">
+                <input type="text" id="pergunta" placeholder="Digite sua dúvida..."
+                       onkeypress="if(event.key==='Enter') enviarMensagem()">
+                <button onclick="enviarMensagem()" class="btn-primary">Enviar</button>
+            </div>
+            <div class="sugestoes">
+                <button class="sugestao" onclick="sugerir('Cadê meu desconto da Amazon?')">Cadê meu desconto da Amazon?</button>
+                <button class="sugestao" onclick="sugerir('Quando vence minha fatura?')">Quando vence minha fatura?</button>
+                <button class="sugestao" onclick="sugerir('Quanto tenho de limite?')">Quanto tenho de limite?</button>
+                <button class="sugestao" onclick="sugerir('Qual o valor da parcela do notebook?')">Parcela do notebook</button>
+            </div>
+        </div>
+    </section>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>

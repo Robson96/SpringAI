@@ -21,6 +21,8 @@ public class Parcela {
     private Integer totalParcelas;
     private LocalDate dataVencimento;
 
+    public Parcela() {}
+
     public Parcela(Long id, Long cartaoId, String descricao, Double valorParcela, Integer numeroParcela, Integer totalParcelas, LocalDate dataVencimento) {
         this.id = id;
         this.cartaoId = cartaoId;

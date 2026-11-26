@@ -12,8 +12,14 @@ import com.rm.chatai.services.ParcelaService;
 import com.rm.chatai.services.TransacaoService;
 import com.rm.chatai.tools.BancoTools;
 import org.springframework.ai.chat.client.ChatClient;
-import org.springframework.ai.ollama.api.OllamaApi;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
+import reactor.core.publisher.Flux;
+import org.springframework.http.MediaType;
 
 import java.util.List;
 
@@ -78,6 +84,14 @@ public class BancoController {
         return chatClient.prompt()
                 .user(request.pergunta)
                 .call()
+                .content();
+    }
+
+    @PostMapping(value = "/chat/stream", produces = MediaType.TEXT_EVENT_STREAM_VALUE)
+    public Flux<String> chatStream(@RequestBody ChatRequest request) {
+        return chatClient.prompt()
+                .user(request.pergunta())
+                .stream()
                 .content();
     }
 

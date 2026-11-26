@@ -21,6 +21,8 @@ public class CompraPendente {
     private LocalDate dataCompra;
     private LocalDate dataPrevistaDebito;
 
+    public CompraPendente() {}
+
     public LocalDate getDataCompra() {
         return dataCompra;
     }
