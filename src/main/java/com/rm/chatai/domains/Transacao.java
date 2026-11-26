@@ -1,4 +1,4 @@
-package com.rm.chatai.domain;
+package com.rm.chatai.domains;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;

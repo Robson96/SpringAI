@@ -1,6 +1,6 @@
-package com.rm.chatai.repository;
+package com.rm.chatai.repositorys;
 
-import com.rm.chatai.domain.Parcela;
+import com.rm.chatai.domains.Parcela;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;

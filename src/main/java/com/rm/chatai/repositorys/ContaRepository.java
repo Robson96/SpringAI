@@ -1,6 +1,6 @@
-package com.rm.chatai.repository;
+package com.rm.chatai.repositorys;
 
-import com.rm.chatai.domain.Conta;
+import com.rm.chatai.domains.Conta;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface ContaRepository extends JpaRepository<Conta, Long> {

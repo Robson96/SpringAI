@@ -1,6 +1,6 @@
-package com.rm.chatai.repository;
+package com.rm.chatai.repositorys;
 
-import com.rm.chatai.domain.Transacao;
+import com.rm.chatai.domains.Transacao;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;
